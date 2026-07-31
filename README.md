@@ -1,75 +1,57 @@
-# React + TypeScript + Vite
+# Caminhos da Música Brasileira
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Site institucional do projeto **Caminhos da Música Brasileira**, idealizado pela Banda Balaio de Ostra. A iniciativa conecta diferentes territórios do Brasil por meio de apresentações musicais, workshops e masterclasses, valorizando a diversidade da música e da cultura popular brasileira.
 
-Currently, two official plugins are available:
+## Sobre o site
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+A página apresenta:
 
-## React Compiler
+- a proposta e os números do projeto;
+- os nove circuitos culturais e suas cidades;
+- as atividades de formação e intercâmbio;
+- a história da Banda Balaio de Ostra;
+- compromissos com inclusão, acessibilidade e sustentabilidade;
+- espaços para notícias, registros e contato.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+O layout é responsivo e foi desenvolvido para funcionar em computadores, tablets e celulares.
 
-## Expanding the ESLint configuration
+## Tecnologias
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React 19
+- TypeScript
+- Vite
+- CSS
+- Lucide React
+- React Map Brazil
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Executando localmente
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Requisitos: Node.js e npm instalados.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+O endereço local será exibido pelo Vite no terminal.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Comandos disponíveis
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm run dev      # inicia o ambiente de desenvolvimento
+npm run build    # gera a versão de produção
+npm run lint     # verifica a qualidade do código
+npm run preview  # visualiza localmente a versão de produção
 ```
+
+## Estrutura principal
+
+```text
+public/images/  Fotografias e recursos visuais
+src/App.tsx     Conteúdo e componentes da página
+src/index.css   Estilos, responsividade e identidade visual
+```
+
+## Banda Balaio de Ostra
+
+Com trajetória iniciada em 2012, a Banda Balaio de Ostra desenvolve um trabalho autoral atravessado por samba, baião, coco, maracatu, forró, MPB e outras manifestações populares. O projeto parte das raízes nordestinas de Márcio Figueiredo e da consolidação do grupo em São José dos Campos para criar novas conexões culturais pelo país.
