@@ -10,7 +10,6 @@ import {
   Mail,
   MapPin,
   Menu,
-  Music2,
   Play,
   Sparkles,
   Users,
@@ -97,7 +96,7 @@ function App() {
     <main>
       <header className="nav-shell">
         <a className="brand" href="#inicio" aria-label="Balaio de Ostra — início">
-          <span className="brand-mark"><Music2 size={19} /></span>
+          <span className="brand-mark"><img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="" /></span>
           <span><b>Balaio</b><small>de Ostra</small></span>
         </a>
         <nav className={menuOpen ? 'nav-links is-open' : 'nav-links'} aria-label="Navegação principal">
@@ -152,11 +151,11 @@ function App() {
 
       <section className="stage-gallery" aria-label="Banda Balaio de Ostra em apresentação">
         <figure className="stage-gallery-main">
-          <img src="/images/indio.jpg" alt="Vocalista da Banda Balaio de Ostra durante apresentação ao vivo" width="4000" height="2252" loading="lazy" decoding="async" />
+          <img src={`${import.meta.env.BASE_URL}images/indio.jpg`} alt="Vocalista da Banda Balaio de Ostra durante apresentação ao vivo" width="4000" height="2252" loading="lazy" decoding="async" />
           <figcaption><span>Balaio de Ostra</span><b>Doze artistas, um só repertório</b></figcaption>
         </figure>
         <figure className="stage-gallery-secondary">
-          <img src="/images/sax-e-batera.png" alt="Banda Balaio de Ostra reunida durante apresentação ao vivo" width="1280" height="854" loading="lazy" decoding="async" />
+          <img src={`${import.meta.env.BASE_URL}images/sax-e-batera.png`} alt="Banda Balaio de Ostra reunida durante apresentação ao vivo" width="1280" height="854" loading="lazy" decoding="async" />
           <figcaption><span>A banda</span><b>Encontro de ritmos</b></figcaption>
         </figure>
       </section>
@@ -210,7 +209,7 @@ function App() {
       </section>
 
       <section className="band section" id="banda">
-        <div className="band-photo"><img src="/images/banda.jpeg" alt="Banda Balaio de Ostra reunida durante apresentação ao vivo" width="1280" height="854" loading="lazy" decoding="async" /><span>14 anos de estrada</span></div>
+        <div className="band-photo"><img src={`${import.meta.env.BASE_URL}images/banda.jpeg`} alt="Banda Balaio de Ostra reunida durante apresentação ao vivo" width="1280" height="854" loading="lazy" decoding="async" /><span>14 anos de estrada</span></div>
         <div className="band-copy"><Eyebrow>Banda Balaio de Ostra</Eyebrow><h2>Um sotaque que<br />atravessou <em>o Brasil.</em></h2><p>A Banda Balaio de Ostra pesquisa e valoriza a música brasileira em um trabalho autoral atravessado por samba, baião, coco, maracatu, forró, MPB e outras manifestações populares.</p><p>Sua trajetória conecta as raízes nordestinas do diretor artístico Márcio Figueiredo à consolidação do grupo em São José dos Campos, construindo uma identidade baseada na diversidade cultural brasileira.</p><div className="band-facts"><span><b>2012</b> primeira apresentação profissional</span><span><b>≈60</b> apresentações por ano</span></div></div>
       </section>
 
@@ -238,7 +237,7 @@ function App() {
           <div><Eyebrow light>Vamos conversar</Eyebrow><h2>A música abre<br /><em>novos caminhos.</em></h2></div>
           <div className="contact-links"><a href="mailto:marciofigueiredo.sjc@gmail.com"><Mail /> <span><small>E-mail</small>marciofigueiredo.sjc@gmail.com</span></a><a href="https://www.instagram.com/balaiodeostra/" target="_blank" rel="noreferrer"><AtSign /> <span><small>Instagram</small>@balaiodeostra</span></a></div>
         </div>
-        <div className="footer-bottom"><a className="brand footer-brand" href="#inicio"><span className="brand-mark"><Music2 size={19} /></span><span><b>Balaio</b><small>de Ostra</small></span></a><p>Do Cariri ao Vale do Paraíba, conectando o Brasil pela música.</p><span>© 2026 Balaio de Ostra</span></div>
+        <div className="footer-bottom"><a className="brand footer-brand" href="#inicio"><span className="brand-mark"><img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="" /></span><span><b>Balaio</b><small>de Ostra</small></span></a><p>Do Cariri ao Vale do Paraíba, conectando o Brasil pela música.</p><span>© 2026 Balaio de Ostra</span></div>
       </footer>
     </main>
   )

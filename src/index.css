@@ -41,7 +41,8 @@ h2 em, h1 em { font-family: 'DM Serif Display', serif; font-weight: 400; color: 
 
 .nav-shell { height: 82px; position: absolute; z-index: 10; inset: 0 0 auto; display: flex; align-items: center; gap: 2.7rem; padding: 0 max(3rem, calc((100vw - 1180px) / 2)); color: var(--cream); border-bottom: 1px solid rgba(255,255,255,.14); }
 .brand { display: inline-flex; gap: .65rem; align-items: center; margin-right: auto; }
-.brand-mark { width: 35px; height: 35px; border: 1px solid var(--gold); border-radius: 50%; display: grid; place-items: center; color: var(--gold); }
+.brand-mark { width: 70px; height: 70px; flex: 0 0 70px; position: relative; overflow: hidden; }
+.brand-mark img { position: absolute; width: 200%; max-width: none; height: auto; left: 50%; bottom: -1px; transform: translateX(-50%); }
 .brand b, .brand small { display: block; line-height: .95; }
 .brand b { font-size: 1.05rem; }
 .brand small { font-family: 'DM Serif Display', serif; font-size: .92rem; color: var(--gold-light); }
