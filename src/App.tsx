@@ -152,16 +152,12 @@ function App() {
 
       <section className="stage-gallery" aria-label="Banda Balaio de Ostra em apresentação">
         <figure className="stage-gallery-main">
-          <img src="/images/banda.jpeg" alt="Banda Balaio de Ostra completa durante apresentação ao vivo diante do público" width="1280" height="854" loading="lazy" decoding="async" />
+          <img src="/images/indio.jpg" alt="Vocalista da Banda Balaio de Ostra durante apresentação ao vivo" width="4000" height="2252" loading="lazy" decoding="async" />
           <figcaption><span>Balaio de Ostra</span><b>Doze artistas, um só repertório</b></figcaption>
         </figure>
-        <figure>
-          <img src="/images/sax.jpg" alt="Músicos da Banda Balaio de Ostra tocando saxofone e trompete" width="623" height="430" loading="lazy" decoding="async" />
-          <figcaption><span>Sopros</span><b>Encontro de ritmos</b></figcaption>
-        </figure>
-        <figure>
-          <img src="/images/batera.jpg" alt="Percussionista da Banda Balaio de Ostra durante show" width="640" height="446" loading="lazy" decoding="async" />
-          <figcaption><span>Percussão</span><b>A pulsação do Balaio</b></figcaption>
+        <figure className="stage-gallery-secondary">
+          <img src="/images/sax-e-batera.png" alt="Banda Balaio de Ostra reunida durante apresentação ao vivo" width="1280" height="854" loading="lazy" decoding="async" />
+          <figcaption><span>A banda</span><b>Encontro de ritmos</b></figcaption>
         </figure>
       </section>
 
@@ -214,7 +210,7 @@ function App() {
       </section>
 
       <section className="band section" id="banda">
-        <div className="band-photo"><img src="/images/marcio-cantando.jpg" alt="Márcio Figueiredo cantando durante apresentação da Banda Balaio de Ostra" width="920" height="1152" loading="lazy" decoding="async" /><span>14 anos de estrada</span></div>
+        <div className="band-photo"><img src="/images/banda.jpeg" alt="Banda Balaio de Ostra reunida durante apresentação ao vivo" width="1280" height="854" loading="lazy" decoding="async" /><span>14 anos de estrada</span></div>
         <div className="band-copy"><Eyebrow>Banda Balaio de Ostra</Eyebrow><h2>Um sotaque que<br />atravessou <em>o Brasil.</em></h2><p>A Banda Balaio de Ostra pesquisa e valoriza a música brasileira em um trabalho autoral atravessado por samba, baião, coco, maracatu, forró, MPB e outras manifestações populares.</p><p>Sua trajetória conecta as raízes nordestinas do diretor artístico Márcio Figueiredo à consolidação do grupo em São José dos Campos, construindo uma identidade baseada na diversidade cultural brasileira.</p><div className="band-facts"><span><b>2012</b> primeira apresentação profissional</span><span><b>≈60</b> apresentações por ano</span></div></div>
       </section>
 
