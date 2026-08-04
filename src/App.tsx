@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import Brazil from '@react-map/brazil'
 import {
   ArrowDown,
@@ -86,10 +86,29 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [teamTab, setTeamTab] = useState<keyof typeof team>('Direção')
 
+  const mapContainerRef = useRef<HTMLDivElement>(null)
+  const [mapSize, setMapSize] = useState(500)
+
   useEffect(() => {
     const close = () => setMenuOpen(false)
     window.addEventListener('resize', close)
     return () => window.removeEventListener('resize', close)
+  }, [])
+
+  useEffect(() => {
+    function updateMapSize() {
+      if (mapContainerRef.current) {
+        const containerWidth = mapContainerRef.current.offsetWidth
+        // Define o tamanho proporcional, limitando a um máximo de 500px 
+        // e descontando um respiro (padding) para não vazar
+        const calculatedSize = Math.min(containerWidth - 32, 500)
+        setMapSize(Math.max(calculatedSize, 280)) // Garante um tamanho mínimo de 280px em telas muito pequenas
+      }
+    }
+
+    updateMapSize()
+    window.addEventListener('resize', updateMapSize)
+    return () => window.removeEventListener('resize', updateMapSize)
   }, [])
 
   return (
@@ -166,12 +185,13 @@ function App() {
           <p>Cada circuito reúne apresentação musical, workshop, masterclass, especialista local, comunicação e registro audiovisual. Os territórios abaixo formam o percurso-base; novas conexões completam a circulação por seis estados.</p>
         </div>
         <div className="circuit-layout">
-          <div className="map-card" aria-label="Mapa conceitual dos caminhos pelo Brasil">
+          {/* Adicionamos a ref aqui para monitorar a largura disponível */}
+          <div className="map-card" ref={mapContainerRef} aria-label="Mapa conceitual dos caminhos pelo Brasil">
             <div className="map-title"><span>Nordeste</span><span>Sudeste</span></div>
             <div className="brazil-map">
               <Brazil
                 type="select-multiple"
-                size={500}
+                size={mapSize}
                 mapColor="#174d42"
                 strokeColor="#092f29"
                 strokeWidth={1.4}

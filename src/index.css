@@ -112,7 +112,7 @@ h2 em, h1 em { font-family: 'DM Serif Display', serif; font-weight: 400; color: 
 .map-card { background: var(--green-950); min-height: 660px; color: var(--cream); padding: 2rem; position: sticky; top: 1rem; overflow: hidden; }
 .map-title { display: flex; justify-content: space-between; text-transform: uppercase; letter-spacing: .16em; font-size: .64rem; color: var(--gold-light); }
 .brazil-map { height: 500px; display: grid; place-items: center; margin: .25rem auto 0; }
-.brazil-map > .map { width: 100%; display: grid; place-items: center; }
+.brazil-map > .map { width: 50%; display: grid; place-items: center; }
 .brazil-map > div:not(.map) { width: max-content !important; max-width: 180px; display: block !important; white-space: nowrap; z-index: 100; pointer-events: none; font-size: .72rem; font-weight: 700; line-height: 1; letter-spacing: .02em; }
 .brazil-map svg { display: block; width: min(100%, 500px) !important; height: auto !important; overflow: visible; }
 .brazil-map path { cursor: default; transition: fill .2s ease, opacity .2s ease; }
