@@ -141,7 +141,6 @@ function App() {
           </div>
           <div className="hero-metrics"><b>20 shows</b><span>9 workshops</span><span>9 masterclasses</span><span>6 estados</span></div>
         </div>
-        <div className="scroll-note"><span>Explore os caminhos</span><ArrowDown size={15} /></div>
       </section>
 
       <section className="intro section" id="projeto">
